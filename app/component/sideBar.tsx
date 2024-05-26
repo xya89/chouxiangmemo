@@ -1,7 +1,6 @@
 'use client'
-import Link from "next/link"
-import { useState } from "react"
-import { CollapseIcon, CrossIcon } from "@/public/icon"
+import { useRouter } from "next/router"
+import Link from "next/link";
 
 const sideItems = {
     '/': {
@@ -27,41 +26,25 @@ const sideItems = {
     },
 }
 
-export function Sidebar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentPage, setCurrentPage] = useState('');
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-    const handleMenuItemClick = () => {
-        setIsOpen(false);
-    }
+export function Sidebar({ isOpen, toggleSidebar }) {
 
     return (
-
-        <aside className="lg:fixed lg:top-0 lg:left-0 lg:h-full lg:w-64 bg-gray-700 text-white p-2 lg:p-4 shadow-lg z-50">
-            <div className="lg:hidden flex justify-between items-center mb-4">
-                <button
-                    onClick={toggleMenu}
-                    type="button"
-                    className="p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                >
-                    {!isOpen ? <CollapseIcon /> : <CrossIcon />}
-                </button>
-            </div>
-            <nav className={`${isOpen ? 'block' : 'hidden'} lg:block space-y-2`}>
+        <aside
+            id="logo-sidebar"
+            className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+            aria-label="Sidebar"
+        >
+            <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
                 {Object.entries(sideItems).map(([path, { name }]) => (
                     <Link
                         key={path}
                         href={path}
-                        className="block transition-all hover:text-neutral-300 py-2 px-4 rounded-md"
-                        onClick={() => setIsOpen(false)}
+                        className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
                     >
                         {name}
                     </Link>
                 ))}
-            </nav>
+            </div>
         </aside>
-    )
+    );
 }

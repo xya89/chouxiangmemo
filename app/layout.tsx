@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Navbar } from "./component/navBar";
-import { Sidebar } from "./component/sideBar";
+import { ClientLayout } from "./component/clientBar";
 import "./globals.css";
 
 
@@ -24,15 +23,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en"
       className="text-black bg-white dark:text-white dark:bg-black">
       <body className="antialiased max-w flex">
-        <Navbar />
-        <main className="flex-auto min-w-0 mt-20 mx-4 lg:ml-72 flex flex-col px-2 md:px-0">
+        <ClientLayout>
           {children}
-          {/* Footer */}
-        </main>
+        </ClientLayout>
       </body>
     </html>
   );
