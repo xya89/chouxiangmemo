@@ -1,5 +1,6 @@
 import { TitleIcon } from "@/public/icon"
 import { CollapseIcon } from "@/public/icon"
+import Link from "next/link"
 
 export function Navbar({ toggleSidebar }) {
     return (
@@ -15,7 +16,9 @@ export function Navbar({ toggleSidebar }) {
                         <span className="sr-only">Open sidebar</span>
                         <CollapseIcon />
                     </button>
-                    <TitleIcon />
+                    <Link href={"/"}>
+                        <TitleIcon />
+                    </Link>
                 </div>
             </div>
         </nav>

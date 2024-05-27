@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClientLayout } from "./component/clientBar";
+import { ClientBar } from "./component/clientBar";
 import "./globals.css";
 
 
@@ -28,9 +28,10 @@ export default function RootLayout({
     <html lang="en"
       className="text-black bg-white dark:text-white dark:bg-black">
       <body className="antialiased max-w flex">
-        <ClientLayout>
+        <ClientBar />
+        <main className="flex-auto min-w-0 mt-20 mx-4 lg:ml-60 md:ml-60 flex flex-col px-2 md:px-0">
           {children}
-        </ClientLayout>
+        </main>
       </body>
     </html>
   );
