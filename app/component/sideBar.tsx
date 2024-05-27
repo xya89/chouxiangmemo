@@ -1,9 +1,9 @@
 'use client'
 import Link from "next/link";
-import { Icon_ClassicalIcon, Icon_AngryFace, Icon_gender, Icon_clownFace, Icon_flower, Icon_GI } from "@/public/icon"
+import { Icon_ClassicalIcon, Icon_AngryFace, Icon_gender, Icon_clownFace, Icon_flower, Icon_GI } from "public/icon"
 
 const sideItems = {
-    '/': {
+    '/home': {
         name: 'home',
         icon: null
     },
@@ -37,12 +37,12 @@ const sideItems = {
     }
 }
 
-export function Sidebar({ isOpen, toggleSidebar }) {
+export function Sidebar({ isOpen }) {
 
     return (
         <aside
             id="logo-sidebar"
-            className={`fixed top-0 left-0 z-40 w-52 h-screen pt-20 transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+            className={`fixed top-0 left-0 z-40 w-80 h-screen pt-20 transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
             aria-label="Sidebar"
         >
             <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
@@ -52,6 +52,7 @@ export function Sidebar({ isOpen, toggleSidebar }) {
                         href={path}
                         className="flex relative items-center rounded transition-all w-35 hover:text-neutral-800 hover:bg-gray-700 dark:hover:text-neutral-200 py-1 px-2 m-3"
                     >
+                        {/* {icon} */}
                         <span className="mr-1 mt-1">{icon}</span>
                         {name}
                     </Link>

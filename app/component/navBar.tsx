@@ -1,4 +1,4 @@
-import { Icon_TitleIcon, Icon_CollapseIcon } from "@/public/icon"
+import { Icon_TitleIcon, Icon_CollapseIcon } from "public/icon"
 import Link from "next/link"
 
 export function Navbar({ toggleSidebar }) {

@@ -3,6 +3,8 @@ import Link from "next/link";
 import disclaimer from './data/disclaimer.json'
 import { Noto_Serif_SC } from 'next/font/google'
 
+import { Icon_AngryFace } from "public/icon";
+
 const noto = Noto_Serif_SC({
   weight: '700',
   style: ['normal'],
@@ -53,6 +55,8 @@ export default function Home() {
         </div>
         <div
           className="flex flex-col flex-row mt-4 lg:flex-row justify-center items-center">
+          <img src="/Genshin_Impact.webp" alt="text" />
+          {/* <Icon_AngryFace /> */}
         </div>
 
 
