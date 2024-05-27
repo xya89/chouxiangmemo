@@ -12,7 +12,7 @@ export function ClientBar() {
 
     return (
         <div className="relative min-h-screen flex">
-            <Navbar toggleSidebar={toggleSidebar} />
+            <Navbar toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
             <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         </div>
     );

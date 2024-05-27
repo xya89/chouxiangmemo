@@ -1,7 +1,15 @@
 import { Icon_TitleIcon, Icon_CollapseIcon } from "public/icon"
 import Link from "next/link"
 
-export function Navbar({ toggleSidebar }) {
+export function Navbar({ toggleSidebar, isSidebarOpen }) {
+    const handleMenuItemClick = () => {
+        toggleSidebar();
+    }
+    const handleTitleIconClicked = () => {
+        if (isSidebarOpen) {
+            toggleSidebar();
+        }
+    }
     return (
         <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-700 dark:boarder-gray-600">
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
@@ -19,7 +27,7 @@ export function Navbar({ toggleSidebar }) {
                             <Icon_CollapseIcon />
                         </span>
                     </button>
-                    <Link href={"/"}>
+                    <Link href={"/"} onClick={handleTitleIconClicked}>
                         <Icon_TitleIcon />
                     </Link>
                 </div>
