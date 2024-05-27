@@ -7,31 +7,31 @@ const sideItems = {
         name: 'home',
         icon: null
     },
-    '/典中典': {
+    '/classical': {
         name: '典中典',
         icon: <Icon_ClassicalIcon />
     },
-    '/攻击性': {
+    '/aggression': {
         name: '攻击性',
         icon: <Icon_AngryFace />
     },
-    '/性别对立': {
+    '/gender': {
         name: '性别对立',
         icon: <Icon_gender />
     },
-    '/自嘲': {
+    '/joker': {
         name: '自嘲',
         icon: <Icon_clownFace />
     },
-    '/种花': {
+    '/china': {
         name: '种花',
         icon: <Icon_flower />
     },
-    '/原神': {
+    '/genshin': {
         name: '原神',
         icon: <Icon_GI />
     },
-    '/About': {
+    '/faq': {
         name: 'About',
         icon: null
     }
