@@ -37,7 +37,7 @@ const sideItems = {
     }
 }
 
-export function Sidebar({ isOpen }) {
+export function Sidebar({ isOpen, toggleSidebar }) {
 
     return (
         <aside
