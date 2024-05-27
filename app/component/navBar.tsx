@@ -1,5 +1,4 @@
-import { TitleIcon } from "@/public/icon"
-import { CollapseIcon } from "@/public/icon"
+import { Icon_TitleIcon, Icon_CollapseIcon } from "@/public/icon"
 import Link from "next/link"
 
 export function Navbar({ toggleSidebar }) {
@@ -14,10 +13,10 @@ export function Navbar({ toggleSidebar }) {
                         className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     >
                         <span className="sr-only">Open sidebar</span>
-                        <CollapseIcon />
+                        <Icon_CollapseIcon />
                     </button>
                     <Link href={"/"}>
-                        <TitleIcon />
+                        <Icon_TitleIcon />
                     </Link>
                 </div>
             </div>
