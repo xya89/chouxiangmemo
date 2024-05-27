@@ -55,7 +55,7 @@ export default function Home() {
         </div>
         <div
           className="flex flex-col flex-row mt-4 lg:flex-row justify-center items-center">
-          <img src="/Genshin_Impact.webp" alt="text" />
+          {/* <img src="/Genshin_Impact.webp" alt="text" /> */}
           {/* <Icon_AngryFace /> */}
         </div>
 

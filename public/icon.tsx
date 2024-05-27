@@ -56,7 +56,7 @@ export function Icon_TitleIcon() {
 
 export function Icon_AngryFace() {
     return (
-        <svg id="emoji_angryFace" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8">
+        <svg id="emoji_angryFace" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8">
             <g id="color">
                 <path fill="#D22F27" d="M48.8559,16c3-2,4-5,3-9c7,2,6,10,3,15" />
                 <path fill="#D22F27" d="M23.1441,16c-3-2-4-5-3-9c-7,2-6,10-3,15" />
