@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-row justify-center items-center mt-4 mx-4 lg:mt-20">
-          <Link id={'enter'} href={'/'}>
+          <Link id={'enter'} href={'/home'}>
             <button
               className="bg-red-600 hover:bg-red-400 text-white font-bold py-2 px-4 rounded mx-8
             transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-100"
